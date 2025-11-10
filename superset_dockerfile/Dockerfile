@@ -2,20 +2,21 @@ FROM apache/superset:latest
 
 USER root
 
-# Обновление pip
-RUN pip install --upgrade pip
-
-# Установка clickhouse коннектора
-RUN pip install clickhouse-connect
-
 # Установка системных зависимостей
 RUN apt-get update && apt-get install -y \
     build-essential \
     libssl-dev \
     libffi-dev \
     python3-dev \
-    pkg-config && \
+    pkg-config \
+    default-libmysqlclient-dev && \
     rm -rf /var/lib/apt/lists/*  # Очистка кэша apt
+
+# Обновление pip
+RUN pip install --upgrade pip
+
+# Установка clickhouse коннектора
+RUN pip install clickhouse-connect
 
 # Установка Python-пакетов
 RUN pip install mysqlclient

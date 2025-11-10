@@ -48,14 +48,20 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/yourusername/HalltapeETL.git
-cd HalltapeETL
+git clone https://github.com/yourusername/ETLsandbox.git
+cd ETLsandbox
 ```
 
 2. Создайте файл `.env` со следующими параметрами:
 ```env
 AIRFLOW_UID=50000
 AIRFLOW_GID=0
+
+# Airflow specific variables
+_AIRFLOW_WWW_USER_USERNAME=admin
+_AIRFLOW_WWW_USER_PASSWORD=admin123
+FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
+
 POSTGRES_USER=airflow
 POSTGRES_PASSWORD=airflow
 CLICKHOUSE_USER=default
@@ -63,6 +69,11 @@ CLICKHOUSE_PASSWORD=your_password
 SUPERSET_ADMIN_USERNAME=admin
 SUPERSET_ADMIN_EMAIL=admin@example.com
 SUPERSET_ADMIN_PASSWORD=admin
+
+# MinIO buckets
+MINIO_PROD_BUCKET_NAME=prod-data
+MINIO_DEV_BUCKET_NAME=dev-data
+
 MINIO_ROOT_USER=minioadmin
 MINIO_ROOT_PASSWORD=minioadmin
 MINIO_BUCKET_NAME=data
