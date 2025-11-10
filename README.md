@@ -106,6 +106,10 @@ docker-compose up -d
 - `./clickhouse` - данные ClickHouse
 - `./superset_data` - данные Superset
 
+## 🔧 Запросы
+
+### Запросы представлены в репозитории https://github.com/SainSinner/Request/tree/main/ETLsandbox
+
 ## 📊 Мониторинг
 
 ### Метрики
