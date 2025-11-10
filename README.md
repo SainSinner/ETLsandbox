@@ -108,7 +108,9 @@ docker-compose up -d
 
 ## 🔧 Запросы
 
-### Запросы представлены в репозитории https://github.com/SainSinner/Request/tree/main/ETLsandbox
+### Запросы для Debezium
+
+https://github.com/SainSinner/Request/tree/main/ETLsandbox
 
 ## 📊 Мониторинг
 
