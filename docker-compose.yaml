@@ -163,6 +163,7 @@ services:
       - "10000:8888"
       - "4040:4040"
     volumes:
+      - ./scripts:/home/jovyan/scripts
       - ./synthetic_data:/home/jovyan/source
       - ./data_lake:/home/jovyan/data_lake
       - ./jupyter_notebook:/home/jovyan
